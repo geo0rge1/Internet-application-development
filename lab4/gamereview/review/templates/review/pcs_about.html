@@ -1,0 +1,17 @@
+{% extends "review/base.html" %}
+{% block content %}
+   <div>
+        <a href="/PCS">Назад</a>
+        <h3>Характеристики</h3>
+        <table>
+            <tr>
+                <td>Название</td>
+                <td>{{pc.title}}</td>
+            </tr>
+            <tr>
+                <td>Цена</td>
+                <td>{{pc.price}}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock content %}
