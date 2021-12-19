@@ -1,0 +1,27 @@
+{% block title %} Компьютеры-Операционные системы {% endblock %}
+{% block body %}
+    <div>
+    <div>
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Модель</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Операционная система</th>
+            <th scope="col">Год выпуска</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for comp in data.computer %}
+            <tr>
+                <th scope="row">{{ comp.model }}</th>
+                <td>{{ comp.price }}</td>
+                <td>{{ comp.os.model }}</td>
+                <td>{{ comp.os.creationyear }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </div>
+{% endblock %}
